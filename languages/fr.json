@@ -200,18 +200,7 @@
         "disable": "Désactiver",
         "no_results": "Aucun résultat trouvé",
         "total": "Total",
-        "status": {
-            "active": "Actif",
-            "inactive": "Inactif",
-            "online": "En ligne",
-            "offline": "Hors ligne",
-            "running": "En cours d'exécution",
-            "stopped": "Arrêté",
-            "suspended": "Suspendu",
-            "installing": "En cours d'installation",
-            "error": "Erreur",
-            "unknown": "Inconnu"
-        },
+        "status": "Statut",
         "deleting": "Suppression...",
         "enable": "Activer",
         "copiedToClipboard": "Copié dans le presse-papiers",
@@ -279,34 +268,7 @@
         "areYouSure": "Êtes-vous sûr ?",
         "delete_confirm_description": "Cette action est irréversible et supprimera définitivement l'enregistrement de notre système.",
         "preview": "Aperçu",
-        "actions": {
-            "save": "Enregistrer",
-            "cancel": "Annuler",
-            "delete": "Supprimer",
-            "edit": "Modifier",
-            "create": "Créer",
-            "submit": "Soumettre",
-            "back": "Retour",
-            "close": "Fermer",
-            "confirm": "Confirmer",
-            "search": "Rechercher",
-            "filter": "Filtrer",
-            "export": "Exporter",
-            "import": "Importer",
-            "refresh": "Actualiser",
-            "loading": "Chargement...",
-            "yes": "Oui",
-            "no": "Non",
-            "copy": "Copier",
-            "copied": "Copié !",
-            "view": "Voir",
-            "manage": "Gérer",
-            "configure": "Configurer",
-            "enable": "Activer",
-            "disable": "Désactiver",
-            "connect": "Connecter",
-            "disconnect": "Déconnecter"
-        },
+        "actions": "Actions",
         "pagination": {
             "showing": "Affichage de {from} à {to} sur {total}",
             "page": "Page {current} sur {total}",
@@ -400,7 +362,17 @@
             "statusPageDisabled": "Page de statut désactivée",
             "statusPageDisabledDescription": "La page publique de statut de l'infrastructure a été désactivée par l'administrateur.",
             "searchPlaceholder": "Rechercher des nœuds...",
-            "noNodesFound": "Aucun nœud trouvé"
+            "noNodesFound": "Aucun nœud trouvé",
+            "core": "Cœur",
+            "cores": "Cœurs",
+            "playersOnline": "Joueurs en ligne",
+            "viewInAdmin": "Voir dans l'administration",
+            "cpuShort": "CPU",
+            "ramShort": "RAM",
+            "diskShort": "DISQUE",
+            "unhealthyNodes": "Nœuds en mauvaise santé",
+            "clickToExpand": "Cliquer pour agrandir",
+            "nodeDetails": "Détails du nœud"
         },
         "stats": {},
         "recent_servers": {
@@ -2500,7 +2472,18 @@
                 "updating": "Mise à jour du déploiement Docker...",
                 "confirm": "Cela va récupérer les dernières images Docker de FeatherPanel et recréer les conteneurs. Continuer ?",
                 "success": "La mise à jour Docker a été déclenchée avec succès.",
-                "failed": "Impossible de déclencher la mise à jour Docker."
+                "failed": "Impossible de déclencher la mise à jour Docker.",
+                "in_progress_button": "Mise à jour du système en cours",
+                "confirm_modal": {
+                    "title": "Mettre à jour FeatherPanel",
+                    "description": "Cela récupérera les dernières images Docker de FeatherPanel et recréera les conteneurs. Voulez-vous continuer ?",
+                    "confirm": "Mettre à jour vers la dernière version",
+                    "cancel": "Annuler"
+                },
+                "progress_modal": {
+                    "title": "Mise à jour du système en cours",
+                    "description": "Veuillez patienter pendant la mise à jour de FeatherPanel. Ne fermez pas cet onglet. Les conteneurs redémarrent, donc votre navigateur peut afficher une erreur de connexion — cela signifie généralement que la mise à jour a commencé. Cette page se rafraîchira périodiquement jusqu’à ce que le panneau réponde à nouveau."
+                }
             }
         },
         "navbar": {},
@@ -4362,7 +4345,13 @@
                     "follow_prompts": "Suivez les instructions à l'écran",
                     "complete": "La mise à jour se terminera automatiquement"
                 }
-            }
+            },
+            "current_version_unknown": "Version actuelle inconnue",
+            "update_to_latest_hint": "Mettre à jour vers la dernière version stable",
+            "docker_pull_offer_title": "Docker pull disponible",
+            "docker_pull_offer_hint": "Le catalogue peut ne pas résoudre ce canal ou ce tag de build exact. Déclenchez une mise à jour Docker pour récupérer ce que votre compose/stack cible.",
+            "unlisted_update_server_badge": "Non enregistré sur le serveur de mise à jour FeatherPanel",
+            "unlisted_update_server_hint": "La chaîne de version de ce build n’est pas répertoriée dans l’API publique des versions de FeatherPanel. C’est normal pour les images de développement, les builds personnalisés ou les forks. Les métadonnées de version et les comparaisons avec la « dernière version stable » peuvent être limitées."
         },
         "quick_links": {
             "title": "Actions rapides",
@@ -8525,7 +8514,10 @@
             "moving": "Déplacement de {count} élément(s)...",
             "moved": "{count} élément(s) déplacé(s)",
             "move_error": "Échec du déplacement des fichiers",
-            "move_into_self_error": "Impossible de déplacer un dossier dans lui-même"
+            "move_into_self_error": "Impossible de déplacer un dossier dans lui-même",
+            "load_error": "Échec du chargement des fichiers",
+            "wings_connection_unavailable": "Connexion Wings indisponible. Veuillez contacter l'équipe de support.",
+            "contact_support": "Si ce problème persiste, veuillez contacter l'équipe de support."
         },
         "editor": {
             "title": "Modification : {file}",
@@ -8553,7 +8545,40 @@
             "stop": "Arrêter",
             "no_results": "Aucune correspondance trouvée dans ce dossier",
             "results_title": "Résultats de recherche",
-            "result_item": "{count} correspondances dans {file}"
+            "result_item": "{count} correspondances dans {file}",
+            "advanced": {
+                "title": "Rechercher des fichiers",
+                "subtitle": "Utilisez des filtres avancés pour affiner les résultats rapidement.",
+                "show_filters": "Filtres avancés",
+                "hide_filters": "Masquer les filtres avancés",
+                "apply_filters": "Appliquer les filtres",
+                "reset_filters": "Réinitialiser",
+                "active_count": "{count} actifs",
+                "searching": "Recherche de fichiers...",
+                "filters_applied": "Les filtres avancés sont actifs.",
+                "path_patterns": "Modèles de chemin",
+                "include_label": "Inclure les modèles de chemin",
+                "include_placeholder": "Inclure (ex. : *.js, src/**)",
+                "include_help": "Seuls les fichiers correspondant à ces modèles glob sont inclus. Séparez les modèles par des virgules.",
+                "exclude_label": "Exclure les modèles de chemin",
+                "exclude_placeholder": "Exclure (ex. : node_modules/**)",
+                "exclude_help": "Les fichiers correspondant à ces modèles sont retirés des résultats.",
+                "case_insensitive": "Insensible à la casse",
+                "file_content": "Contenu du fichier",
+                "search_text_label": "Rechercher dans le contenu du fichier",
+                "search_text_placeholder": "Texte de recherche",
+                "search_text_help": "Rechercher du texte à l'intérieur du contenu des fichiers. Supporte la recherche de texte brut.",
+                "max_file_size_label": "Taille max de fichier pour le scan de contenu",
+                "max_file_size": "Taille max de fichier (Mio)",
+                "max_file_size_help": "Les fichiers plus grands que cette limite sont ignorés pour la correspondance de contenu.",
+                "include_oversized": "Inclure les fichiers trop grands",
+                "content_case_insensitive": "Contenu insensible à la casse",
+                "file_size_label": "Plage de taille de fichier",
+                "file_size": "Taille du fichier (Octets)",
+                "file_size_help": "Filtrer les fichiers par taille en octets. Laisser vide pour aucune limite.",
+                "minimum_placeholder": "Minimum",
+                "maximum_placeholder": "Maximum"
+            }
         },
         "editors": {
             "minecraftProperties": {
@@ -9144,7 +9169,8 @@
             "extract": "Extraire",
             "compress": "Compresser",
             "permissions": "Permissions",
-            "delete": "Supprimer"
+            "delete": "Supprimer",
+            "hash": "Hash du fichier"
         },
         "dialogs": {
             "create_file": {
@@ -9195,7 +9221,17 @@
                 "move_success": "Déplacement terminé",
                 "copy_success": "Copie terminée",
                 "move_error": "Échec du déplacement des fichiers",
-                "copy_error": "Échec de la copie des fichiers"
+                "copy_error": "Échec de la copie des fichiers",
+                "destination_current": "Dossier actuel",
+                "destination_parent": "Dossier parent",
+                "destination_root": "Dossier racine",
+                "destination_selected": "Destination sélectionnée : {path}",
+                "path_quick_pick": "Choix rapide de chemin",
+                "show_advanced": "Chemin avancé",
+                "hide_advanced": "Masquer avancé",
+                "new_name_label": "Nouveau nom",
+                "new_name_placeholder": "Laisser vide pour {name}",
+                "new_name_multi_hint": "Plusieurs éléments sélectionnés. Chaque élément sera dupliqué automatiquement en utilisant le format de nommage \"- copie\"."
             },
             "compress": {
                 "title": "Compresser des fichiers",
@@ -9263,6 +9299,16 @@
                 "error": "Échec du chargement de l’aperçu de l’image. Veuillez essayer de la télécharger à la place.",
                 "close": "Fermer",
                 "download": "Télécharger"
+            },
+            "hash": {
+                "title": "Hash du fichier",
+                "description": "Hashes calculés pour {path}",
+                "calculating": "Calcul des hashes...",
+                "copy": "Copier",
+                "copied": "Copié dans le presse-papiers",
+                "copy_error": "Échec de la copie du hash",
+                "error": "Échec du calcul du hash du fichier",
+                "close": "Fermer"
             }
         }
     },
@@ -9588,7 +9634,11 @@
         "pressEnterToSend": "Appuyez sur Entrée pour envoyer, Shift+Entrée pour une nouvelle ligne",
         "conversations": "Conversations",
         "closeChat": "Fermer le chat",
-        "toggleSidebar": "Afficher/masquer la barre latérale"
+        "toggleSidebar": "Afficher/masquer la barre latérale",
+        "welcomeVds": "Salut {name} ! 👋 Je suis l'IA VDS de votre FeatherPanel. Je peux vous aider à gérer vos serveurs virtuels — vérifier l'état, contrôler l'alimentation, gérer les sauvegardes, et plus encore !",
+        "you": "Vous",
+        "toolActionSuccess": "Action '{action}' terminée avec succès",
+        "toolActionFailed": "L'action '{action}' a échoué"
     },
     "server": {
         "terminal": {
